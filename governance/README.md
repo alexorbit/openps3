@@ -1466,3 +1466,309 @@ OpenPS3 is designed as infrastructure, not a temporary software project.
 
 Its governance must therefore prioritize survivability under adverse conditions over organizational convenience.
 
+# Appendix A — Definitions
+
+This appendix defines formal terminology used throughout the OpenPS3 governance framework. These definitions are binding for interpretation of all governance documents.
+
+---
+
+## A.1 Core Entities
+
+### Project
+
+The OpenPS3 project refers to the collective set of repositories, specifications, documentation, tooling, and community processes governed under this document.
+
+---
+
+### Foundation
+
+The OpenPS3 Foundation is the legal and operational entity responsible for infrastructure stewardship, financial custody, and trademark management.
+
+It does not control technical decisions.
+
+---
+
+### Technical Steering Committee (TSC)
+
+The highest technical authority in OpenPS3 responsible for architecture, RFC approval, and release governance.
+
+---
+
+### Working Group (WG)
+
+A domain-specific technical unit responsible for implementing and maintaining subsystems within a defined scope.
+
+---
+
+### Maintainer
+
+A contributor with delegated authority to review, approve, and manage changes within a specific subsystem or repository.
+
+---
+
+### Committer
+
+A contributor with write access to one or more repositories, operating under maintainer oversight.
+
+---
+
+### Contributor
+
+Any individual participating in the project without elevated privileges.
+
+---
+
+## A.2 Governance Artifacts
+
+### RFC (Request for Comments)
+
+A formal proposal document used to introduce or modify significant technical or architectural changes.
+
+---
+
+### ADR (Architecture Decision Record)
+
+A permanent record of an accepted architectural decision and its rationale.
+
+---
+
+### Release
+
+A versioned and published snapshot of the OpenPS3 system or its components.
+
+---
+
+### PR (Pull Request)
+
+A proposed code change submitted for review and potential integration.
+
+---
+
+## A.3 Decision Terminology
+
+### Consensus
+
+A state in which no qualified participant maintains a sustained, technically grounded objection.
+
+---
+
+### Blocking Objection
+
+A formally justified objection preventing progress until resolution or escalation.
+
+---
+
+### Non-Blocking Objection
+
+A subjective or non-critical concern that does not prevent decision finalization.
+
+---
+
+### Vote
+
+A formal decision mechanism used when consensus cannot be reached.
+
+---
+
+## A.4 Governance States
+
+### Draft
+
+Initial state of an RFC or ADR under development.
+
+### Active
+
+A formally accepted and operational document or decision.
+
+### Superseded
+
+A document replaced by a newer version.
+
+### Rejected
+
+A proposal that has been formally declined.
+
+### Deprecated
+
+A previously active decision that is no longer recommended for use but retained for historical context.
+
+---
+
+## A.5 Technical Scope Definitions
+
+### System Core
+
+The foundational layer of OpenPS3 including kernel, hypervisor, and runtime primitives.
+
+---
+
+### Subsystem
+
+A logically isolated functional component such as networking, graphics, or storage.
+
+---
+
+### Interface Contract
+
+A formally defined interaction boundary between subsystems.
+
+---
+
+### Clean-Room Implementation
+
+An implementation produced without direct reference to proprietary source code, based solely on documented behavior.
+
+---
+
+# Appendix B — Governance Lifecycle
+
+This appendix describes the lifecycle of governance entities and artifacts across the OpenPS3 system.
+
+---
+
+## B.1 Lifecycle Overview
+
+OpenPS3 governance operates as a state-transition system where entities evolve through defined stages:
+
+* Contributors evolve into Committers, Maintainers, and potentially TSC members.
+* RFCs evolve from Draft → Active → Superseded or Rejected.
+* ADRs evolve from Proposed → Accepted → Superseded.
+* Releases evolve from Development → RC → Stable → Patched.
+
+---
+
+## B.2 Contributor Lifecycle
+
+### Stage 1 — Contributor
+
+Initial participation through issues, pull requests, and discussions.
+
+---
+
+### Stage 2 — Committer
+
+Granted repository write access under maintainer supervision.
+
+Requirements:
+
+* sustained contribution quality;
+* adherence to governance rules;
+* demonstrated reliability.
+
+---
+
+### Stage 3 — Maintainer
+
+Responsible for subsystem stewardship.
+
+Requirements:
+
+* deep domain expertise;
+* review competence;
+* architectural understanding.
+
+---
+
+### Stage 4 — TSC Member
+
+Highest technical governance role.
+
+Requirements:
+
+* cross-subsystem expertise;
+* long-term project impact;
+* proven governance judgment.
+
+---
+
+## B.3 RFC Lifecycle Diagram (Logical Flow)
+
+RFC progression follows this abstract state machine:
+
+1. Draft created
+2. Public discussion initiated
+3. Revision cycles occur
+4. Review by maintainers and TSC
+5. Decision phase:
+
+   * Approved → Implementation
+   * Rejected → Archived
+   * Deferred → Backlog
+6. Finalization and archival
+
+---
+
+## B.4 ADR Lifecycle
+
+ADR flow:
+
+1. Proposed
+2. Reviewed alongside RFC or decision context
+3. Accepted and frozen as immutable record
+4. Superseded when replaced
+5. Archived for historical traceability
+
+---
+
+## B.5 Release Lifecycle
+
+### Phase 1 — Development
+
+Active integration of features and fixes.
+
+---
+
+### Phase 2 — Feature Freeze
+
+Only bug fixes and stabilization changes allowed.
+
+---
+
+### Phase 3 — Release Candidate (RC)
+
+Pre-release builds distributed for validation.
+
+---
+
+### Phase 4 — Stable Release
+
+Official release published under version tag.
+
+---
+
+### Phase 5 — Patch Cycle
+
+Post-release maintenance and security fixes.
+
+---
+
+## B.6 Governance Evolution Constraints
+
+Governance evolution is constrained by the following rules:
+
+* No entity may bypass lifecycle stages.
+* Role elevation requires documented justification.
+* Artifact state changes must be traceable.
+* Historical states must remain accessible.
+
+---
+
+## B.7 Structural Invariants
+
+The governance system must always preserve:
+
+* separation of technical and financial authority;
+* non-centralization of power;
+* reproducibility of decision history;
+* auditability of all major changes;
+* survivability of the project beyond individual contributors.
+
+---
+
+## B.8 Final Note
+
+This governance framework is intentionally designed as a living system.
+
+However, its structural invariants are not optional and must not be compromised for short-term efficiency gains.
+
+
