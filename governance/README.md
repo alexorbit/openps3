@@ -254,3 +254,403 @@ Governance within OpenPS3 is organized in descending order of authority:
 Lower-level documents must never contradict higher-level governance.
 
 Whenever inconsistencies arise, higher-order governance prevails until formally amended.
+
+# 6. OpenPS3 Foundation
+
+The OpenPS3 Foundation is the legal and organizational anchor of the project.
+
+It exists to provide continuity, infrastructure stewardship, and legal protection for the OpenPS3 ecosystem without exerting unilateral technical control over the project.
+
+## 6.1 Role and Scope
+
+The Foundation is responsible for:
+
+* holding project trademarks (if registered);
+* maintaining legal ownership of core infrastructure assets (domains, CI systems, build infrastructure);
+* coordinating funding and grants when applicable;
+* ensuring compliance with applicable laws and regulations;
+* providing neutral infrastructure hosting for repositories and services;
+* supporting long-term continuity in case of leadership turnover.
+
+The Foundation does **not** control technical direction.
+
+It has no authority over:
+
+* architectural decisions;
+* code acceptance/rejection;
+* roadmap definition;
+* release approval;
+* RFC approval.
+
+Technical authority is explicitly delegated to the Technical Steering Committee.
+
+---
+
+## 6.2 Neutrality Constraint
+
+The Foundation must remain structurally neutral.
+
+It may not privilege any company, individual, or subgroup within the project.
+
+Any attempt by external organizations to capture or dominate the Foundation must be considered a governance failure and addressed through the conflict resolution process defined later in this document.
+
+---
+
+## 6.3 Governance Interface
+
+The Foundation interacts with the technical project only through formal interfaces:
+
+* Technical Steering Committee reports
+* Public RFC outcomes
+* Release reports
+* Security advisories
+
+Informal or private technical influence is not permitted.
+
+---
+
+## 6.4 Financial Stewardship
+
+If the project receives funding, the Foundation acts as custodian of resources.
+
+Funds may only be allocated to:
+
+* infrastructure costs (CI, hosting, storage);
+* security audits;
+* documentation initiatives;
+* community grants;
+* operational continuity.
+
+Financial transparency is required on a periodic basis.
+
+---
+
+# 7. Technical Steering Committee (TSC)
+
+The Technical Steering Committee is the highest technical authority in OpenPS3.
+
+It governs architectural direction, release approvals, and resolution of technical disputes.
+
+---
+
+## 7.1 Mandate
+
+The TSC is responsible for:
+
+* approving or rejecting RFCs;
+* defining project-wide technical architecture;
+* resolving cross-repository conflicts;
+* setting release criteria and schedules;
+* ensuring consistency across subsystems;
+* appointing and removing maintainers (via documented process);
+* overseeing technical health of the project.
+
+---
+
+## 7.2 Composition
+
+The TSC is composed of senior contributors with sustained, high-impact contributions across multiple subsystems.
+
+Membership is:
+
+* merit-based;
+* time-bound or periodically reviewed;
+* subject to renewal based on contribution quality and activity.
+
+No single organization may hold majority control of the TSC.
+
+---
+
+## 7.3 Decision-Making
+
+The TSC prefers consensus.
+
+When consensus cannot be reached:
+
+* formal voting is used;
+* simple majority is sufficient unless otherwise defined by policy;
+* dissenting opinions must be documented.
+
+Decisions must always be recorded in public logs.
+
+---
+
+## 7.4 Accountability
+
+TSC members are accountable to:
+
+* the governance document;
+* public technical review;
+* maintainers and contributors;
+* project principles defined in Section 3.
+
+TSC members may be removed for:
+
+* prolonged inactivity;
+* repeated disregard of governance;
+* conflict of interest violations;
+* abusive behavior;
+* failure to fulfill responsibilities.
+
+---
+
+# 8. Working Groups
+
+Working Groups (WGs) are semi-autonomous technical units focused on specific domains of the OpenPS3 ecosystem.
+
+---
+
+## 8.1 Purpose
+
+Working Groups exist to:
+
+* divide complex system domains into manageable units;
+* increase specialization;
+* improve engineering efficiency;
+* distribute decision-making responsibility.
+
+---
+
+## 8.2 Examples of Working Groups
+
+Typical WGs may include:
+
+* Kernel / System Core WG
+* Hypervisor Emulation WG
+* Filesystem & Storage WG
+* Graphics Pipeline WG
+* Networking WG
+* Toolchain & Build Systems WG
+* Documentation & Specification WG
+* Security & Audit WG
+
+---
+
+## 8.3 Authority
+
+Working Groups:
+
+* propose RFCs;
+* implement approved designs;
+* maintain subsystem codebases;
+* manage internal technical discussions.
+
+However, they do not override:
+
+* TSC decisions;
+* governance document;
+* project-wide architecture constraints.
+
+---
+
+## 8.4 Leadership
+
+Each Working Group has one or more maintainers responsible for:
+
+* coordinating contributors;
+* ensuring quality of changes;
+* representing WG concerns in TSC discussions;
+* maintaining documentation accuracy.
+
+WG leads are appointed by the TSC and may be replaced through formal review.
+
+---
+
+# 9. Maintainers
+
+Maintainers are responsible for the long-term health of specific repositories or subsystems.
+
+---
+
+## 9.1 Responsibilities
+
+Maintainers:
+
+* review and merge contributions;
+* enforce coding standards;
+* ensure tests and CI integrity;
+* maintain repository documentation;
+* participate in RFC evaluation;
+* guide contributors.
+
+---
+
+## 9.2 Authority Boundaries
+
+Maintainers may:
+
+* approve changes within their scope;
+* reject contributions that violate technical or governance rules;
+* request modifications for quality or consistency.
+
+Maintainers may NOT:
+
+* override governance decisions;
+* introduce breaking architectural changes without RFC approval;
+* act outside their assigned scope.
+
+---
+
+## 9.3 Appointment
+
+Maintainers are appointed based on:
+
+* sustained contribution quality;
+* domain expertise;
+* demonstrated judgment in reviews;
+* community trust.
+
+Appointment is confirmed by the TSC.
+
+---
+
+## 9.4 Removal
+
+Maintainers may be removed for:
+
+* inactivity;
+* repeated poor review quality;
+* violation of governance principles;
+* abuse of authority;
+* loss of trust.
+
+Removal requires documented rationale.
+
+---
+
+# 10. Committers
+
+Committers are contributors with write access to one or more repositories.
+
+---
+
+## 10.1 Scope
+
+Commit access is:
+
+* scoped per repository;
+* not global by default;
+* revocable.
+
+---
+
+## 10.2 Responsibilities
+
+Committers must:
+
+* adhere to contribution guidelines;
+* ensure correctness of committed code;
+* respect maintainer review processes;
+* avoid bypassing CI or review systems.
+
+---
+
+## 10.3 Safety Requirements
+
+Direct commits must not:
+
+* bypass required reviews;
+* introduce unreviewed architectural changes;
+* violate security constraints.
+
+---
+
+# 11. Contributors
+
+Contributors are any individuals participating in the project without elevated privileges.
+
+---
+
+## 11.1 Rights
+
+Contributors may:
+
+* submit pull requests;
+* open issues;
+* propose RFCs;
+* participate in discussions;
+* review public changes.
+
+---
+
+## 11.2 Responsibilities
+
+Contributors are expected to:
+
+* follow contribution guidelines;
+* respect clean-room constraints;
+* maintain professional conduct;
+* ensure originality of contributions.
+
+---
+
+## 11.3 Contribution Merit
+
+Contributor reputation is established through:
+
+* code quality;
+* consistency;
+* review participation;
+* technical depth;
+* adherence to governance principles.
+
+---
+
+# 12. Role Lifecycle
+
+All roles within OpenPS3 follow a lifecycle model.
+
+---
+
+## 12.1 Promotion
+
+Advancement (Contributor → Committer → Maintainer → TSC) is based on:
+
+* sustained contribution history;
+* technical expertise;
+* trust and review reliability;
+* community impact.
+
+---
+
+## 12.2 Suspension
+
+Roles may be temporarily suspended due to:
+
+* security concerns;
+* investigation of governance violations;
+* inactivity.
+
+---
+
+## 12.3 Removal
+
+Permanent removal may occur for:
+
+* repeated governance violations;
+* malicious behavior;
+* abandonment;
+* conflict of interest abuse.
+
+All removals must be documented.
+
+---
+
+## 12.4 Succession
+
+No role is permanent.
+
+All responsibilities must be transferable.
+
+Succession planning is mandatory for maintainers and TSC members.
+
+---
+
+# 13. Structural Integrity Rule
+
+No individual, organization, or subgroup may accumulate irreversible control over the project.
+
+Any structural drift toward centralized control must trigger governance review.
+
+The long-term integrity of the governance model takes precedence over short-term efficiency gains.
+
