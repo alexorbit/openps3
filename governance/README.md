@@ -654,3 +654,440 @@ Any structural drift toward centralized control must trigger governance review.
 
 The long-term integrity of the governance model takes precedence over short-term efficiency gains.
 
+# 14. Decision-Making Process
+
+OpenPS3 adopts a hybrid decision-making model combining consensus-driven discussion with structured escalation mechanisms.
+
+The objective is to maximize technical correctness while preserving decision velocity.
+
+---
+
+## 14.1 Default Model: Consensus
+
+All non-trivial decisions should begin with consensus-seeking discussion.
+
+Consensus is defined as:
+
+> a state in which no qualified participant maintains a sustained, technically justified objection.
+
+Consensus does not require unanimity of preference, but it requires absence of unresolved technical blocking concerns.
+
+---
+
+## 14.2 Scope of Consensus
+
+Consensus is required for:
+
+* architectural changes;
+* cross-subsystem interfaces;
+* kernel or hypervisor modifications;
+* changes to governance rules;
+* release criteria modifications;
+* security model changes.
+
+Operational or localized changes may bypass consensus if they remain within maintainer authority.
+
+---
+
+## 14.3 Escalation to Voting
+
+If consensus cannot be reached within a reasonable timeframe, the issue escalates to formal voting.
+
+Voting is used only when:
+
+* discussion has stabilized without resolution;
+* technical positions are well-documented;
+* further debate is unlikely to change outcomes.
+
+---
+
+## 14.4 Voting Mechanics
+
+Unless otherwise specified:
+
+* each eligible TSC member has one vote;
+* majority rule applies (>50%);
+* abstentions do not count toward the total.
+
+In case of tie:
+
+* the proposal is rejected unless a designated tie-breaking mechanism is defined for that domain.
+
+---
+
+## 14.5 Blocking vs Non-Blocking Objections
+
+Objections are categorized as:
+
+### Blocking Objection
+
+A blocking objection must be:
+
+* technically substantiated;
+* relevant to system correctness, security, or architecture;
+* within scope of governance authority.
+
+Blocking objections prevent adoption until resolved or overridden by vote.
+
+### Non-Blocking Objection
+
+Non-blocking objections may include:
+
+* stylistic concerns;
+* performance optimizations without correctness impact;
+* subjective preferences.
+
+Non-blocking objections do not prevent progress.
+
+---
+
+## 14.6 Documentation Requirement
+
+All final decisions must be documented in at least one of:
+
+* RFC record;
+* ADR record;
+* release notes (for operational decisions).
+
+Undocumented decisions are considered invalid within governance scope.
+
+---
+
+# 15. RFC Process (Request for Comments)
+
+The RFC process is the primary mechanism for introducing significant changes into OpenPS3.
+
+---
+
+## 15.1 Purpose
+
+RFCs exist to:
+
+* formalize technical proposals;
+* enable structured review;
+* preserve architectural history;
+* ensure cross-team alignment.
+
+---
+
+## 15.2 When RFCs Are Required
+
+An RFC is required when a proposal:
+
+* modifies system architecture;
+* introduces new subsystems;
+* changes public APIs or interfaces;
+* alters security model;
+* impacts multiple working groups;
+* affects release strategy or compatibility guarantees.
+
+---
+
+## 15.3 RFC Lifecycle
+
+Each RFC follows a defined lifecycle:
+
+### 1. Draft
+
+Initial proposal written by contributor or working group.
+
+### 2. Discussion
+
+Public review phase with technical feedback.
+
+### 3. Revision
+
+RFC updated based on feedback.
+
+### 4. Review
+
+TSC and maintainers perform formal evaluation.
+
+### 5. Decision
+
+Approved, rejected, or deferred.
+
+### 6. Implementation
+
+If approved, implementation proceeds under tracked issue.
+
+### 7. Finalization
+
+RFC is marked as active specification or archived.
+
+---
+
+## 15.4 RFC Structure
+
+Every RFC must include:
+
+* Summary
+* Motivation
+* Technical Design
+* Alternatives Considered
+* Backward Compatibility Impact
+* Security Considerations
+* Implementation Plan
+* Open Questions
+
+---
+
+## 15.5 RFC Authority
+
+RFCs are not binding until approved.
+
+Approval requires:
+
+* TSC consensus or vote;
+* confirmation of feasibility;
+* alignment with governance principles.
+
+---
+
+## 15.6 RFC Rejection
+
+RFCs may be rejected due to:
+
+* architectural inconsistency;
+* insufficient justification;
+* security risks;
+* redundancy;
+* maintenance burden.
+
+Rejected RFCs must include rationale.
+
+---
+
+# 16. ADR Policy (Architecture Decision Records)
+
+ADR documents capture irreversible or semi-permanent technical decisions.
+
+---
+
+## 16.1 Purpose
+
+ADRs serve to:
+
+* document architectural reasoning;
+* provide historical context;
+* prevent repeated debates;
+* guide future implementations.
+
+---
+
+## 16.2 Scope
+
+ADRs are required for decisions that:
+
+* cannot be trivially reversed;
+* define system structure;
+* introduce core abstractions;
+* impact long-term maintenance.
+
+---
+
+## 16.3 ADR Format
+
+Each ADR must include:
+
+* Title
+* Status (Proposed / Accepted / Deprecated / Superseded)
+* Context
+* Decision
+* Consequences
+* Rationale
+* References
+
+---
+
+## 16.4 ADR Immutability
+
+Once accepted, ADRs are immutable records.
+
+If a decision changes:
+
+* a new ADR must be created;
+* the previous ADR is marked "Superseded";
+* linkage between versions must be preserved.
+
+---
+
+## 16.5 Relationship with RFCs
+
+* RFCs propose changes.
+* ADRs record accepted outcomes.
+
+Not all RFCs result in ADRs, but all ADR-level decisions must originate from RFC or equivalent formal review.
+
+---
+
+# 17. Release Governance
+
+Release governance defines how OpenPS3 produces stable and versioned outputs.
+
+---
+
+## 17.1 Release Philosophy
+
+Releases prioritize:
+
+* stability over frequency;
+* reproducibility over experimentation;
+* correctness over feature completeness.
+
+---
+
+## 17.2 Release Types
+
+### Major Release
+
+* architectural changes
+* potential incompatibilities
+* RFC-driven
+
+### Minor Release
+
+* backward-compatible features
+* subsystem improvements
+
+### Patch Release
+
+* bug fixes
+* security patches
+* minimal risk changes
+
+---
+
+## 17.3 Release Criteria
+
+A release may only proceed when:
+
+* CI is green across all core subsystems;
+* no unresolved blocking security issues exist;
+* documentation is updated for public interfaces;
+* maintainers approve subsystem readiness;
+* TSC confirms release integrity.
+
+---
+
+## 17.4 Release Ownership
+
+Each release has a designated Release Maintainer responsible for:
+
+* coordinating release timeline;
+* ensuring readiness of components;
+* signing off on release candidate builds;
+* publishing release artifacts.
+
+---
+
+## 17.5 Release Candidate Process
+
+Before final release:
+
+1. Release Candidate (RC) is generated
+2. Testing phase begins (internal + community)
+3. Issues are triaged and fixed
+4. RC iterations continue until stable
+5. Final release is signed off
+
+---
+
+## 17.6 Rollback Policy
+
+If a release introduces critical regressions:
+
+* immediate patch release is prioritized;
+* rollback builds may be issued;
+* affected components may be temporarily disabled.
+
+---
+
+## 17.7 Versioning Scheme
+
+OpenPS3 uses semantic versioning:
+
+* MAJOR.MINOR.PATCH
+
+Additional suffixes may include:
+
+* -rc (release candidate)
+* -beta (pre-release testing)
+* -alpha (experimental builds)
+
+---
+
+# 18. Security Governance
+
+Security governance ensures that OpenPS3 maintains a defensible security posture.
+
+---
+
+## 18.1 Security Principles
+
+* security is a first-class design constraint;
+* vulnerabilities are treated as systemic issues;
+* disclosure is handled responsibly;
+* fixes take priority over feature work.
+
+---
+
+## 18.2 Security Working Group
+
+A dedicated Security WG is responsible for:
+
+* vulnerability assessment;
+* threat modeling;
+* audit coordination;
+* security RFC review;
+* incident response.
+
+---
+
+## 18.3 Vulnerability Handling
+
+When a vulnerability is identified:
+
+1. Private report is submitted
+2. Security WG validates issue
+3. Fix is developed in private branch if necessary
+4. Patch is prepared
+5. Coordinated disclosure occurs
+6. Public advisory is published
+
+---
+
+## 18.4 Disclosure Policy
+
+Disclosure must balance:
+
+* user protection;
+* system stability;
+* responsible publication of security information.
+
+Immediate disclosure is required for actively exploited vulnerabilities.
+
+---
+
+## 18.5 Security Boundaries
+
+OpenPS3 explicitly does not guarantee:
+
+* protection against malicious host systems;
+* protection against hardware-level attacks;
+* protection outside defined threat model.
+
+Security guarantees apply only within defined system scope.
+
+---
+
+## 18.6 Security Review Requirement
+
+All changes affecting:
+
+* kernel;
+* hypervisor;
+* networking stack;
+* privilege boundaries;
+
+must undergo mandatory security review.
