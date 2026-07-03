@@ -1,0 +1,30 @@
+# Sony firmware binaries
+firmware/
+*.PUP
+*.pup
+*.self
+*.SELF
+*.pkg
+*.PKG
+*.spkg
+*.SPKG
+
+# Decrypted/extracted ELFs
+*.elf
+*.ELF
+core_os/
+lv0/
+lv1/
+lv2/
+
+# Disassembly output
+*_disasm.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Temp
+*.tmp
+*.swp
