@@ -1091,3 +1091,378 @@ All changes affecting:
 * privilege boundaries;
 
 must undergo mandatory security review.
+
+# 19. Documentation Governance
+
+Documentation in OpenPS3 is treated as a core engineering artifact, equivalent in importance to source code.
+
+---
+
+## 19.1 Scope
+
+Documentation includes:
+
+* architecture specifications;
+* API references;
+* subsystem design documents;
+* RFCs and ADRs;
+* developer guides;
+* build and tooling instructions;
+* security advisories.
+
+---
+
+## 19.2 Principles
+
+All documentation must adhere to:
+
+* accuracy over completeness;
+* clarity over stylistic preference;
+* traceability to implementation;
+* version alignment with codebase;
+* minimal ambiguity.
+
+---
+
+## 19.3 Source of Truth
+
+The canonical source of truth is:
+
+1. Source code behavior
+2. RFCs and ADRs
+3. Maintained documentation
+
+When conflicts arise, documentation must be updated to match implementation or corrected via governance process.
+
+---
+
+## 19.4 Ownership
+
+Each subsystem must have designated documentation maintainers responsible for:
+
+* keeping documentation synchronized with code;
+* reviewing documentation changes alongside code changes;
+* ensuring consistency across repositories.
+
+---
+
+## 19.5 Documentation Changes
+
+Any change affecting:
+
+* public APIs;
+* system behavior;
+* architecture;
+
+must include corresponding documentation updates.
+
+---
+
+## 19.6 Documentation Drift
+
+Documentation drift is treated as a technical defect.
+
+Recurring drift may result in:
+
+* maintainer review;
+* mandatory documentation refactoring;
+* temporary freeze on feature merges in affected areas.
+
+---
+
+# 20. Financial and Trademark Governance
+
+This section defines stewardship of financial resources and intellectual property identifiers.
+
+---
+
+## 20.1 Financial Governance Scope
+
+Financial governance applies to:
+
+* donations;
+* grants;
+* sponsorships;
+* infrastructure funding;
+* service credits or in-kind contributions.
+
+---
+
+## 20.2 Financial Principles
+
+All financial activity must follow:
+
+* transparency;
+* traceability;
+* public reporting (when legally permitted);
+* strict separation from technical authority.
+
+---
+
+## 20.3 Spending Categories
+
+Funds may only be allocated to:
+
+* infrastructure operations (CI, hosting, storage);
+* security audits and penetration testing;
+* documentation and preservation efforts;
+* community development grants;
+* operational continuity.
+
+---
+
+## 20.4 Financial Oversight
+
+The OpenPS3 Foundation acts as custodian of financial resources and must:
+
+* maintain accounting records;
+* publish periodic financial summaries;
+* ensure separation of duties;
+* prevent unilateral fund usage without oversight.
+
+---
+
+## 20.5 Trademark Governance
+
+All project-related trademarks (e.g., OpenPS3 name, logos) are managed to:
+
+* prevent misuse or misrepresentation;
+* preserve project identity;
+* ensure consistent branding.
+
+---
+
+## 20.6 Trademark Usage
+
+Permitted usage includes:
+
+* non-commercial community projects;
+* documentation and research references;
+* approved derivative tooling.
+
+Prohibited usage includes:
+
+* implying official endorsement without approval;
+* commercial exploitation that misrepresents affiliation;
+* forks attempting brand impersonation.
+
+---
+
+## 20.7 Enforcement
+
+Trademark misuse is handled through:
+
+* public notice;
+* request for correction;
+* escalation to Foundation oversight if needed.
+
+---
+
+# 21. Conflict Resolution
+
+This section defines structured mechanisms for resolving disputes within OpenPS3.
+
+---
+
+## 21.1 Guiding Principle
+
+Conflict resolution prioritizes:
+
+* technical correctness;
+* project stability;
+* fairness in process;
+* preservation of contributor trust.
+
+---
+
+## 21.2 Types of Conflicts
+
+### Technical Conflicts
+
+Disagreements about implementation, architecture, or design.
+
+### Governance Conflicts
+
+Disputes over authority, process, or decision legitimacy.
+
+### Interpersonal Conflicts
+
+Behavioral or communication issues between contributors.
+
+---
+
+## 21.3 Resolution Hierarchy
+
+Conflicts are resolved in ascending order:
+
+1. Direct discussion between parties
+2. Working Group mediation
+3. Maintainer mediation
+4. TSC review
+5. Formal governance vote (if necessary)
+
+---
+
+## 21.4 Mediation Principles
+
+Mediators must:
+
+* remain neutral;
+* base decisions on governance rules;
+* document outcomes;
+* avoid informal or opaque rulings.
+
+---
+
+## 21.5 Escalation Threshold
+
+Escalation occurs when:
+
+* technical disagreement blocks progress;
+* mediation fails to produce resolution;
+* governance violation is suspected.
+
+---
+
+## 21.6 Binding Decisions
+
+Final decisions made by the TSC under governance scope are binding unless overturned through formal amendment.
+
+---
+
+## 21.7 Behavioral Standards
+
+Repeated violations of conduct expectations may result in:
+
+* temporary suspension;
+* role downgrade;
+* permanent removal from roles.
+
+---
+
+# 22. Amendment Process
+
+This section defines how governance itself can evolve.
+
+---
+
+## 22.1 Amendment Requirement
+
+Any modification to this governance document requires:
+
+* formal proposal;
+* documented rationale;
+* review period;
+* approval by TSC.
+
+---
+
+## 22.2 Amendment Threshold
+
+Unless otherwise specified:
+
+* amendments require supermajority approval (>2/3 of TSC).
+
+---
+
+## 22.3 Review Period
+
+Proposed amendments must remain open for review for a minimum period before final decision, allowing:
+
+* community feedback;
+* technical evaluation;
+* impact assessment.
+
+---
+
+## 22.4 Emergency Amendments
+
+Emergency amendments are permitted only when:
+
+* there is a critical legal risk;
+* security concerns require immediate governance change;
+* project integrity is at risk.
+
+Emergency changes must be:
+
+* documented immediately;
+* reviewed retroactively;
+* subject to ratification.
+
+---
+
+## 22.5 Versioning
+
+Each governance revision must increment version:
+
+* ensuring traceability of structural evolution;
+* preserving historical governance states.
+
+---
+
+# 23. Dissolution and Project Continuity
+
+This section defines continuity guarantees for long-term preservation of OpenPS3.
+
+---
+
+## 23.1 Continuity Objective
+
+OpenPS3 is designed to survive:
+
+* loss of key contributors;
+* organizational changes;
+* funding disruptions;
+* infrastructure migration.
+
+---
+
+## 23.2 Dissolution Conditions
+
+Dissolution of the Foundation or governance structure may occur only when:
+
+* no viable contributor base remains;
+* legal or regulatory constraints force termination;
+* unanimous or legally mandated decision is reached.
+
+---
+
+## 23.3 Asset Preservation
+
+In case of dissolution:
+
+* source code remains under open-source license;
+* repositories are archived publicly;
+* documentation is preserved in read-only form;
+* trademarks are released or reassigned according to legal constraints.
+
+---
+
+## 23.4 Continuity Transfer
+
+If governance collapses, responsibility may transition to:
+
+* successor open-source foundations;
+* distributed community governance models;
+* independent maintainers maintaining fork continuity.
+
+---
+
+## 23.5 Non-Abandonment Principle
+
+The project shall not be silently abandoned.
+
+Any discontinuation must be:
+
+* publicly declared;
+* fully documented;
+* structurally preserved for future recovery.
+
+---
+
+## 23.6 Final Principle
+
+OpenPS3 is designed as infrastructure, not a temporary software project.
+
+Its governance must therefore prioritize survivability under adverse conditions over organizational convenience.
+
